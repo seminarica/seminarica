@@ -5,29 +5,34 @@ services:
     paragraphs:
       - Supervision schafft einen geschützten Rahmen, berufliche Situationen, Rollen und Zusammenarbeit mit etwas Abstand zu betrachten.
       - Für Teams, Gruppen und Einzelpersonen – praxisnah, wertschätzend und auf Augenhöhe.
+    quote: Ein neuer Blick eröffnet neue Möglichkeiten.
   - slug: ausbildung
     menu: Ausbildung
     heading: Motivieren – Lernen – Verhalten
     paragraphs:
       - Praxisnahe Workshops und Fortbildungen für Ausbilderinnen und Ausbilder. Im Mittelpunkt steht die Frage, wie junge Menschen gut begleitet werden können – auch dann, wenn es einmal schwierig wird.
       - Inhalte und Umfang werden auf Ihre Einrichtung und Ihre konkreten Fragen abgestimmt.
+    quote: Lernen braucht Raum für eigene Erfahrungen.
   - slug: beratung
     menu: Beratung
     heading: Der Blick von außen
     paragraphs:
       - Beratung schafft Zeit, berufliche Situationen, Rollen und Zusammenarbeit mit etwas Abstand zu betrachten. Gemeinsam sortieren wir, was gerade wichtig ist, und entwickeln passende nächste Schritte.
       - Für Teams, Gruppen und Einzelpersonen.
+    quote: Der Blick von außen kann den nächsten Schritt sichtbar machen.
   - slug: coaching
     menu: Coaching
     heading: Eigene Antworten finden
     paragraphs:
       - Coaching unterstützt Sie dabei, Entscheidungen zu klären, Veränderungen zu gestalten und Ihre Stärken bewusst einzusetzen. Vertraulich, lösungsorientiert und auf Augenhöhe.
+    quote: Gute Fragen führen zu eigenen Antworten.
     link: Kontakt aufnehmen
   - slug: seminare
     menu: Seminare
     heading: Wissen, das im Alltag weiterwirkt
     paragraphs:
       - Seminare, Workshops und Praxisbegleitung schaffen Raum für neue Impulse, Austausch und konkrete Übungen. Format, Thema und Termin entwickeln wir gemeinsam.
+    quote: Wissen wird lebendig, wenn man es ausprobiert.
     link: Seminar anfragen
   - slug: referenzen
     menu: Referenzen
@@ -35,6 +40,7 @@ services:
     paragraphs:
       - Hier kann eine Auswahl von Organisationen, Projekten und Rückmeldungen aus der bisherigen Zusammenarbeit stehen.
       - Referenzen und Zitate lassen sich einfach in diesem Abschnitt ergänzen.
+    quote: Zusammenarbeit beginnt mit Vertrauen.
 person:
   heading: Holger Klemm
   paragraphs:

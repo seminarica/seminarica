@@ -34,14 +34,14 @@
           ><br /><a href="mailto:{{ site.email }}">{{ site.email }}</a>
         </address>
       </div>
-      <nav class="main-nav" aria-label="Hauptnavigation">
-        {% for service in site.data.content.services %}
-        <a class="{{ service.slug }}" href="#{{ service.slug }}"
-          >{{ service.menu }}</a
-        >
-        {% endfor %}
-      </nav>
     </header>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      {% for service in site.data.content.services %}
+      <a class="{{ service.slug }}" href="#{{ service.slug }}"
+        >{{ service.menu }}</a
+      >
+      {% endfor %}
+    </nav>
 
     <div class="page-shell">
       <main>
@@ -53,6 +53,9 @@
             <p>{{ paragraph }}</p>
             {% endfor %}
           </div>
+          <figure class="person-photo">
+            <img src="{{ '/img/holger_web.jpg' | relative_url }}" alt="Holger Klemm">
+          </figure>
           <div class="person-contact">
             <h2>Kontakt</h2>
             <p>{{ site.owner }}<br>{{ site.address }}<br>{{ site.postcode_city }}</p>
@@ -71,12 +74,17 @@
             class="content-panel section-{{ service.slug }}"
             id="{{ service.slug }}"
           >
-            <div class="panel-copy">
+            <div class="panel-copy panel-primary">
               <h1>{{ service.menu }}</h1>
               <h2>{{ service.heading }}</h2>
-              {% for paragraph in service.paragraphs %}
-              <p>{{ paragraph }}</p>
-              {% endfor %} {% if service.link %}<a
+              <p>{{ service.paragraphs[0] }}</p>
+            </div>
+            <aside class="citation" aria-label="Zitat">
+              <p>„{{ service.quote }}“</p>
+            </aside>
+            <div class="panel-copy panel-secondary">
+              {% if service.paragraphs[1] %}<p>{{ service.paragraphs[1] }}</p>{% endif %}
+              {% if service.link %}<a
                 class="arrow-link"
                 href="#kontakt"
                 >{{ service.link }} →</a
