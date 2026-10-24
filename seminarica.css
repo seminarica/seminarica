@@ -1,0 +1,412 @@
+---
+---
+
+/* seminarica: intentionally compact, colourful and a little bit old-school */
+
+:root {
+  --orange: #ba6220;
+  --purple: #660066;
+  --blue: #003366;
+  --green: #336600;
+  --yellow: #ffcc00;
+  --light-orange: #ff9933;
+  --red: #990000;
+  --paper: rgba(255, 255, 255, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+body {
+  margin: 0;
+  color: #111;
+  background-image: url("{{ '/img/h3.jpg' | relative_url }}?v=2");
+  background-position: top center;
+  background-repeat: repeat-y;
+  background-size: 100vw auto;
+  font:
+    16px Arial,
+    Helvetica,
+    sans-serif;
+}
+a {
+  color: var(--orange);
+}
+
+.page-shell {
+  width: min(54em, 100%);
+  min-width: 27em;
+  margin: 1em auto;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.15);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background: var(--paper);
+  box-shadow: 0 0.15em 0.5em rgba(0, 0, 0, 0.13);
+}
+.header-inner {
+  width: min(54em, 100%);
+  min-width: 27em;
+  margin: 0 auto;
+  min-height: 6.3em;
+  padding: 1.1em 1em 0.7em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  color: var(--orange);
+  text-decoration: none;
+}
+.logo-icon {
+  width: 3.8em;
+  height: 3.8em;
+}
+.logo strong {
+  display: block;
+  font-size: 2.15em;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+}
+.logo small {
+  display: block;
+  margin-top: 0.35em;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+address {
+  margin-top: 0.35em;
+  color: #777;
+  font-size: 0.7em;
+  font-style: normal;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.main-nav {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.main-nav a {
+  padding: 0.52em 0.25em;
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+}
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  background: #fff;
+  color: var(--orange);
+  outline: none;
+}
+.ausbildung {
+  background: var(--purple);
+}
+.beratung {
+  background: var(--blue);
+}
+.coaching {
+  background: var(--green);
+}
+.seminare {
+  background: var(--yellow);
+  color: #5c4a00 !important;
+}
+.referenzen {
+  background: var(--light-orange);
+}
+.supervision {
+  background: var(--red);
+}
+
+.start-panel {
+  min-height: 28em;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2em;
+  padding: 3em;
+  background: rgba(255, 255, 255, 0.9);
+}
+.intro {
+  margin: 0 0 1.2em;
+  color: var(--orange);
+  font-size: 0.75em;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.person-intro {
+  align-self: center;
+}
+.person-intro h1 {
+  margin: 0 0 0.45em;
+  color: var(--red);
+  font-size: 2.25em;
+  font-weight: normal;
+}
+.person-intro p:not(.intro) {
+  max-width: 34em;
+  margin: 0 0 1em;
+  font-size: 0.9em;
+}
+.person-contact {
+  align-self: center;
+  padding: 1.2em;
+  border-left: 0.35em solid var(--red);
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 0.85em;
+}
+.person-contact h2 {
+  margin: 0 0 0.65em;
+  color: var(--red);
+  font-size: 1.1em;
+  font-weight: normal;
+}
+.person-contact p {
+  margin: 0 0 1em;
+}
+
+.service-sections {
+  position: relative;
+  overflow: hidden;
+  margin-top: 1.5em;
+  padding: 1px 0;
+}
+.diagonal-run {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  pointer-events: none;
+  clip-path: polygon(0% 0, 17% 0, 100% 100%, 83% 100%);
+}
+.diagonal-image {
+  position: relative;
+  overflow: hidden;
+  background: center / cover no-repeat;
+  transform: rotate(-3deg) scale(1.12);
+}
+.diagonal-image:nth-child(even) {
+  transform: rotate(3deg) scale(1.12);
+}
+.diagonal-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.48;
+}
+.diagonal-image-1 {
+  background-image: url("img/bg1_1.jpg");
+}
+.diagonal-image-1::after {
+  background: var(--purple);
+}
+.diagonal-image-2 {
+  background-image: url("img/bg2_1.jpg");
+}
+.diagonal-image-2::after {
+  background: var(--blue);
+}
+.diagonal-image-3 {
+  background-image: url("img/bg3_1.jpg");
+}
+.diagonal-image-3::after {
+  background: var(--green);
+}
+.diagonal-image-4 {
+  background-image: url("img/bg4_1.jpg");
+}
+.diagonal-image-4::after {
+  background: var(--yellow);
+}
+.diagonal-image-5 {
+  background-image: url("img/bg5_1.jpg");
+}
+.diagonal-image-5::after {
+  background: var(--light-orange);
+}
+.diagonal-image-6 {
+  background-image: url("img/bg6_1.jpg");
+}
+.diagonal-image-6::after {
+  background: var(--red);
+}
+.content-panel {
+  position: relative;
+  z-index: 3;
+  min-height: 25em;
+  display: flex;
+  align-items: center;
+  margin: 1.1em 0;
+  background: transparent;
+  scroll-margin-top: 1em;
+}
+.panel-copy {
+  position: relative;
+  z-index: 3;
+  width: 36%;
+  margin-left: 8%;
+  padding: 2.2em 1.5em;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0.25em 0.3em 0 rgba(0, 0, 0, 0.12);
+}
+.section-supervision .panel-copy {
+  margin-left: 54%;
+}
+.section-ausbildung .panel-copy {
+  margin-left: 8%;
+}
+.section-beratung .panel-copy {
+  margin-left: 50%;
+}
+.section-coaching .panel-copy {
+  margin-left: 13%;
+}
+.section-seminare .panel-copy {
+  margin-left: 53%;
+}
+.section-referenzen .panel-copy {
+  margin-left: 7%;
+}
+.panel-copy h1,
+.contact-panel h1 {
+  margin: 0 0 0.3em;
+  color: var(--orange);
+  font-size: 1.7em;
+  font-weight: normal;
+}
+.panel-copy h2 {
+  margin: 0 0 1em;
+  padding: 0.25em 0 0.25em 0.6em;
+  border-bottom: 0.2em solid var(--orange);
+  background: #eee;
+  font-size: 1.1em;
+}
+.panel-copy p {
+  margin: 0 0 1em;
+  font-size: 0.85em;
+}
+.quiet {
+  color: #777;
+}
+.arrow-link {
+  font-size: 0.85em;
+  font-weight: bold;
+}
+.section-ausbildung h1,
+.section-ausbildung h2 {
+  color: var(--purple);
+  border-color: var(--purple);
+}
+.section-beratung h1,
+.section-beratung h2 {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+.section-coaching h1,
+.section-coaching h2 {
+  color: var(--green);
+  border-color: var(--green);
+}
+.section-seminare h1,
+.section-seminare h2 {
+  color: #a27e00;
+  border-color: var(--yellow);
+}
+.section-referenzen h1,
+.section-referenzen h2 {
+  color: var(--light-orange);
+  border-color: var(--light-orange);
+}
+.section-supervision h1,
+.section-supervision h2 {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.contact-panel {
+  padding: 3em 2.5em;
+  background: rgba(255, 255, 255, 0.94);
+  text-align: center;
+}
+.contact-panel p {
+  margin: 0.5em 0;
+  font-size: 0.85em;
+}
+footer {
+  width: 100%;
+  background: #eee;
+  font-size: 0.75em;
+}
+footer div {
+  width: min(54em, 100%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5em;
+  padding: 0.45em 1em;
+}
+footer a {
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  .page-shell {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+  .header-inner {
+    min-width: 0;
+    min-height: 7em;
+  }
+  .logo strong {
+    font-size: 1.75em;
+  }
+  address {
+    max-width: 12em;
+    font-size: 0.62em;
+  }
+  .main-nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .start-panel {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 2em 1.5em;
+  }
+  .content-panel {
+    min-height: 21em;
+    margin: 0.75em 0;
+  }
+  .panel-copy,
+  .section-supervision .panel-copy,
+  .section-ausbildung .panel-copy,
+  .section-beratung .panel-copy,
+  .section-coaching .panel-copy,
+  .section-seminare .panel-copy,
+  .section-referenzen .panel-copy {
+    width: 72%;
+    margin-left: 14%;
+    padding: 2em 1.5em;
+  }
+  .diagonal-run {
+    clip-path: polygon(2% 0, 22% 0, 98% 100%, 78% 100%);
+  }
+}

@@ -1,0 +1,44 @@
+services:
+  - slug: supervision
+    menu: Supervision
+    heading: Gemeinsam auf die Arbeit schauen
+    paragraphs:
+      - Supervision schafft einen geschützten Rahmen, berufliche Situationen, Rollen und Zusammenarbeit mit etwas Abstand zu betrachten.
+      - Für Teams, Gruppen und Einzelpersonen – praxisnah, wertschätzend und auf Augenhöhe.
+  - slug: ausbildung
+    menu: Ausbildung
+    heading: Motivieren – Lernen – Verhalten
+    paragraphs:
+      - Praxisnahe Workshops und Fortbildungen für Ausbilderinnen und Ausbilder. Im Mittelpunkt steht die Frage, wie junge Menschen gut begleitet werden können – auch dann, wenn es einmal schwierig wird.
+      - Inhalte und Umfang werden auf Ihre Einrichtung und Ihre konkreten Fragen abgestimmt.
+  - slug: beratung
+    menu: Beratung
+    heading: Der Blick von außen
+    paragraphs:
+      - Beratung schafft Zeit, berufliche Situationen, Rollen und Zusammenarbeit mit etwas Abstand zu betrachten. Gemeinsam sortieren wir, was gerade wichtig ist, und entwickeln passende nächste Schritte.
+      - Für Teams, Gruppen und Einzelpersonen.
+  - slug: coaching
+    menu: Coaching
+    heading: Eigene Antworten finden
+    paragraphs:
+      - Coaching unterstützt Sie dabei, Entscheidungen zu klären, Veränderungen zu gestalten und Ihre Stärken bewusst einzusetzen. Vertraulich, lösungsorientiert und auf Augenhöhe.
+    link: Kontakt aufnehmen
+  - slug: seminare
+    menu: Seminare
+    heading: Wissen, das im Alltag weiterwirkt
+    paragraphs:
+      - Seminare, Workshops und Praxisbegleitung schaffen Raum für neue Impulse, Austausch und konkrete Übungen. Format, Thema und Termin entwickeln wir gemeinsam.
+    link: Seminar anfragen
+  - slug: referenzen
+    menu: Referenzen
+    heading: Zusammenarbeit, die Vertrauen schafft
+    paragraphs:
+      - Hier kann eine Auswahl von Organisationen, Projekten und Rückmeldungen aus der bisherigen Zusammenarbeit stehen.
+      - Referenzen und Zitate lassen sich einfach in diesem Abschnitt ergänzen.
+person:
+  heading: Holger Klemm
+  paragraphs:
+    - Ich begleite Menschen und Organisationen in Entwicklungs- und Veränderungsprozessen. Wichtig sind mir eine klare Haltung, ein wertschätzender Blick und Lösungen, die im Alltag wirklich funktionieren.
+    - Hier ist Platz für Werdegang, Qualifikationen und Schwerpunkte.
+
+contact_text: Sie möchten ein Angebot besprechen oder haben eine Frage?

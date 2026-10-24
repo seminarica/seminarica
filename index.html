@@ -1,0 +1,94 @@
+---
+---
+
+<!doctype html>
+<html lang="{{ site.lang | default: 'de' }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ site.description }}" />
+    <title>{{ site.title }}</title>
+    <link rel="icon" href="{{ '/img/favicon.ico' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/seminarica.css' | relative_url }}" />
+  </head>
+  <body>
+    <header class="site-header" id="start">
+      <div class="header-inner">
+        <a
+          class="logo"
+          href="#start"
+          aria-label="Zur Startseite von {{ site.name }}"
+          ><img
+            class="logo-icon"
+            src="{{ '/img/favicon.ico' | relative_url }}"
+            alt=""
+          />
+          <span
+            ><strong>{{ site.name }}</strong
+            ><small>{{ site.tagline }}</small></span
+          ></a
+        >
+        <address>
+          {{ site.owner }}<br />{{ site.address }}<br />{{ site.postcode_city
+          }}<br />Tel.: <a href="tel:{{ site.phone_link }}">{{ site.phone }}</a
+          ><br /><a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </address>
+      </div>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        {% for service in site.data.content.services %}
+        <a class="{{ service.slug }}" href="#{{ service.slug }}"
+          >{{ service.menu }}</a
+        >
+        {% endfor %}
+      </nav>
+    </header>
+
+    <div class="page-shell">
+      <main>
+        <section class="start-panel" aria-labelledby="person-heading">
+          <div class="person-intro">
+            <p class="intro">{{ site.tagline }}</p>
+            <h1 id="person-heading">{{ site.data.content.person.heading }}</h1>
+            {% for paragraph in site.data.content.person.paragraphs %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
+          </div>
+          <div class="person-contact">
+            <h2>Kontakt</h2>
+            <p>{{ site.owner }}<br>{{ site.address }}<br>{{ site.postcode_city }}</p>
+            <p><a href="tel:{{ site.phone_link }}">{{ site.phone }}</a><br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+          </div>
+        </section>
+
+        <div class="service-sections">
+          <div class="diagonal-run" aria-hidden="true">
+            {% for service in site.data.content.services %}
+            <div class="diagonal-image diagonal-image-{{ forloop.index }}"></div>
+            {% endfor %}
+          </div>
+          {% for service in site.data.content.services %}
+          <section
+            class="content-panel section-{{ service.slug }}"
+            id="{{ service.slug }}"
+          >
+            <div class="panel-copy">
+              <h1>{{ service.menu }}</h1>
+              <h2>{{ service.heading }}</h2>
+              {% for paragraph in service.paragraphs %}
+              <p>{{ paragraph }}</p>
+              {% endfor %} {% if service.link %}<a
+                class="arrow-link"
+                href="#kontakt"
+                >{{ service.link }} →</a
+              >{% endif %}
+            </div>
+          </section>
+          {% endfor %}
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div><a href="#kontakt">Kontakt</a><a href="#start">Nach oben</a></div>
+    </footer>
+  </body>
+</html>
