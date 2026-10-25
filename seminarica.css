@@ -68,8 +68,8 @@ a {
   text-decoration: none;
 }
 .logo-icon {
-  width: 3.8em;
-  height: 3.8em;
+  width: 3.5em;
+  height: 3.5em;
 }
 .logo strong {
   display: block;
@@ -98,7 +98,7 @@ address {
   z-index: 10;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  box-shadow: 0 .15em .5em rgba(0, 0, 0, .13);
+  box-shadow: 0 0.15em 0.5em rgba(0, 0, 0, 0.13);
 }
 .main-nav a {
   padding: 0.52em 0.25em;
@@ -136,11 +136,10 @@ address {
 .start-panel {
   min-height: 28em;
   display: grid;
-  grid-template-columns: 1.7fr 1fr .9fr;
+  grid-template-columns: 1.7fr 1fr 0.9fr;
   gap: 2em;
   padding: 3em;
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 .5em 1.25em rgba(0, 0, 0, .16);
 }
 .intro {
   margin: 0 0 1.2em;
@@ -164,8 +163,17 @@ address {
   margin: 0 0 1em;
   font-size: 0.9em;
 }
-.person-photo { align-self: center; margin: 0; }
-.person-photo img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; box-shadow: .25em .3em 0 rgba(0, 0, 0, .12); }
+.person-photo {
+  align-self: center;
+  margin: 0;
+}
+.person-photo img {
+  display: block;
+  width: 120%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  box-shadow: 0.25em 0.3em 0 rgba(0, 0, 0, 0.12);
+}
 .person-contact {
   align-self: center;
   padding: 1.2em;
@@ -206,10 +214,10 @@ address {
   position: relative;
   overflow: hidden;
   background: center / cover no-repeat;
-  transform: rotate(-3deg) scale(1.12);
+  transform: scale(1.12);
 }
 .diagonal-image:nth-child(even) {
-  transform: rotate(3deg) scale(1.12);
+  transform: scale(1.12);
 }
 .diagonal-image::after {
   content: "";
@@ -218,31 +226,31 @@ address {
   opacity: 0.48;
 }
 .diagonal-image-1 {
-  background-image: url("img/bg1_1.jpg");
+  background-image: url("img/bg5_1.jpg");
 }
 .diagonal-image-1::after {
   background: var(--red);
 }
 .diagonal-image-2 {
-  background-image: url("img/bg2_1.jpg");
+  background-image: url("img/bg1_1.jpg");
 }
 .diagonal-image-2::after {
   background: var(--purple);
 }
 .diagonal-image-3 {
-  background-image: url("img/bg3_1.jpg");
+  background-image: url("img/bg2_1.jpg");
 }
 .diagonal-image-3::after {
   background: var(--blue);
 }
 .diagonal-image-4 {
-  background-image: url("img/bg4_1.jpg");
+  background-image: url("img/bg3_1.jpg");
 }
 .diagonal-image-4::after {
   background: var(--green);
 }
 .diagonal-image-5 {
-  background-image: url("img/bg5_1.jpg");
+  background-image: url("img/bg4_1.jpg");
 }
 .diagonal-image-5::after {
   background: var(--yellow);
@@ -256,9 +264,9 @@ address {
 .content-panel {
   position: relative;
   z-index: 3;
-  min-height: 55em;
+  min-height: 45em;
   width: 77%;
-  margin: 1.4em 4% 1.4em 19%;
+  margin: 0.4em 4% 0em 19%;
   padding: 1em 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 8.5em minmax(0, 1fr);
@@ -271,14 +279,31 @@ address {
   position: relative;
   z-index: 3;
   width: auto;
-  min-height: 13em;
+  min-height: 23em;
   margin: 0;
   padding: 2.2em 1.5em;
   background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0.25em 0.3em 0 rgba(0, 0, 0, 0.12);
 }
-.citation { position: relative; z-index: 3; width: 8.5em; height: 8.5em; margin: 0; padding: 1em; display: grid; place-items: center; border-radius: 50%; background: rgba(255, 255, 255, .94); box-shadow: .2em .25em 0 rgba(0, 0, 0, .12); color: var(--orange); text-align: center; }
-.citation p { margin: 0; font-size: .72em; font-style: italic; line-height: 1.35; }
+.citation {
+  position: relative;
+  z-index: 3;
+  width: 8.5em;
+  height: 8.5em;
+  margin: 0;
+  padding: 1em;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--orange);
+  text-align: center;
+}
+.citation p {
+  margin: 0;
+  font-size: 0.72em;
+  font-style: italic;
+  line-height: 1.35;
+}
 .panel-copy h1,
 .contact-panel h1 {
   margin: 0 0 0.3em;
@@ -387,13 +412,16 @@ footer a {
     gap: 1em;
     padding: 2em 1.5em;
   }
-  .person-photo { max-width: 16em; justify-self: center; }
+  .person-photo {
+    max-width: 16em;
+    justify-self: center;
+  }
   .content-panel {
     min-height: 21em;
     width: 70%;
-    margin: .75em 4% .75em 26%;
+    margin: 0.75em 4% 0.75em 26%;
     grid-template-columns: 1fr;
-    gap: .8em;
+    gap: 0.8em;
   }
   .panel-copy {
     width: auto;
@@ -405,5 +433,7 @@ footer a {
     width: 21%;
     clip-path: none;
   }
-  .citation { justify-self: center; }
+  .citation {
+    justify-self: center;
+  }
 }
