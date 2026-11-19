@@ -174,22 +174,7 @@ address {
   object-fit: cover;
   box-shadow: 0.25em 0.3em 0 rgba(0, 0, 0, 0.12);
 }
-.person-contact {
-  align-self: center;
-  padding: 1.2em;
-  border-left: 0.35em solid var(--red);
-  background: rgba(255, 255, 255, 0.72);
-  font-size: 0.85em;
-}
-.person-contact h2 {
-  margin: 0 0 0.65em;
-  color: var(--red);
-  font-size: 1.1em;
-  font-weight: normal;
-}
-.person-contact p {
-  margin: 0 0 1em;
-}
+
 
 .service-sections {
   position: relative;
